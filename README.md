@@ -1,9 +1,10 @@
 Code samples from: 
  - https://superfastpython.com/multithreaded-file-saving/
  - https://superfastpython.com/concurrency-file-io/
-
+___
 
 # Resources
+
 - [High Performance Python, 2nd Edition, Micha Gorelick, Ian Ozsvald, April 2020, O'Reilly](https://www.oreilly.com/library/view/high-performance-python/9781492055013/)
 - [Learn All of Python Concurrency, Jason Brownlee, @superfastpython.com](https://superfastpython.com/everything-bundle/)
 
@@ -13,9 +14,6 @@ Code samples from:
 - https://superfastpython.com/threading-in-python/
 - https://superfastpython.com/multithreaded-file-saving/
 - https://superfastpython.com/python-multiprocessing-interview-questions/
-
-
-
 
 
 - https://martin-thoma.com/asyncio/
@@ -35,3 +33,19 @@ Code samples from:
 - [Python Multiprocessing Tutorial: Run Code in Parallel Using the Multiprocessing Module,Corey Schafer, @youtube, time 00:44:14](https://www.youtube.com/watch?v=fKl2JW_qrso)
 
 - [python Threading Tutorial: Run Code Concurrently Using the Threading Module @youtube, time 00:36:04](https://www.youtube.com/watch?v=IEEhzQoKtQU)
+
+___
+
+# Measuring time spent, when writing on text files
+run all the examples from example [multithreaded-file-saving](https://superfastpython.com/multithreaded-file-saving/)
+
+``` 
+# run all
+    bash run-profiling-test.sh
+
+# delete all tmp direcotries
+    bash disk-cleanup.sh 
+``` 
+
+Note: 
+For multiple lines in file 'tests',  each `tmp` directory could reach aprox __5GB__

@@ -30,26 +30,39 @@ def generate_file(identifier, n_values=10, n_lines=5000):
 
 # generate and save a file
 @time_fn
-def generate_and_save(path, identifier):
-    # generate data
-    data = generate_file(identifier)
-    # create a unique filename
-    filepath = join(path, f'data-{identifier:04d}.csv')
-    # save data file to disk
-    save_file(filepath, data)
-    # report progress
-    print(f'.saved {filepath}', flush=True)
+def generate_and_save(path, identifiers):
+    # generate each file
+    for identifier in identifiers:
+        # generate data
+        data = generate_file(identifier)
+        # create a unique filename
+        filepath = join(path, f'data-{identifier:04d}.csv')
+        # save data file to disk
+        save_file(filepath, data)
+        # report progress
+        print(f'.saved {filepath}', flush=True)
 
 
 # generate many data files in a directory
 @time_fn
-def main(path='tmp6', n_files=5000):
+def main(path='tmp7', n_files=5000):
     # create a local directory to save files
     makedirs(path, exist_ok=True)
+
+    # generate the file identifiers
+    identifiers = [i for i in range(n_files)]
+    # determine chunksize
+    n_workers = 8
+    chunk_size = round(len(identifiers) / n_workers)
+
     # create the process pool
     with ProcessPoolExecutor(8) as exe:
-        # submit tasks to generate files
-        _ = [exe.submit(generate_and_save, path, i) for i in range(n_files)]
+        # split the rename operations into chunks
+        for i in range(0, len(identifiers), chunk_size):
+            # select a chunk of filenames
+            ids = identifiers[i:(i + chunk_size)]
+            # submit file rename tasks
+            _ = exe.submit(generate_and_save, path, ids)
 
 
 # entry point

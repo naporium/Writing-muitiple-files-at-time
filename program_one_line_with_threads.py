@@ -4,7 +4,7 @@
 from os import makedirs
 from os.path import join
 from function_profiller import time_fn
-
+from concurrent.futures import ThreadPoolExecutor
 
 @time_fn
 def save_file(filepath, data):
@@ -30,7 +30,7 @@ def generate_file(identifier, n_values=10, n_lines=5000):
         # convert list to string with values separated by commas
         data.append(','.join(line))
         # convert list of lines to a string separated by new lines
-    return '\n'.join(data)
+        return '\n'.join(data)
 
 
 @time_fn
@@ -49,16 +49,17 @@ def generate_and_save(path, identifier):
 
 
 @time_fn
-def main(path='tmp0', n_files=5000):
+def main(path='tmp1', n_files=5000):
     """
     # generate many data files in a directory
     """
 
     # create a local directory to save files
     makedirs(path, exist_ok=True)
-    # create all files
-    for i in range(n_files):
-        generate_and_save(path, i)
+    # create the thread pool
+    with ThreadPoolExecutor(100) as exe:
+        # submit tasks to generate files
+        _ = [exe.submit(generate_and_save, path, i) for i in range(n_files)]
 
 
 # entry point

@@ -30,7 +30,7 @@ def generate_file(identifier, n_values=10, n_lines=5000):
         # convert list to string with values separated by commas
         data.append(','.join(line))
         # convert list of lines to a string separated by new lines
-        return '\n'.join(data)
+    return '\n'.join(data)
 
 
 @time_fn
@@ -49,7 +49,7 @@ def generate_and_save(path, identifier):
 
 
 @time_fn
-def main(path='tmp2', n_files=5000):
+def main(path='tmp4', n_files=5000):
     """
     # generate many data files in a directory
     """

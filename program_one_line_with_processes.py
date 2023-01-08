@@ -43,7 +43,7 @@ def generate_and_save(path, identifier):
 
 # generate many data files in a directory
 @time_fn
-def main(path='tmp3', n_files=5000):
+def main(path='tmp2', n_files=5000):
     # create a local directory to save files
     makedirs(path, exist_ok=True)
     # create the process pool
