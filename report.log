@@ -1,0 +1,75 @@
+
+
+-----------------
+  Run number: 1
+-----------------
+[ One line per file ]
+@time_fn: main took 0.4667024612426758 seconds
+@time_fn: main took 0.9915390014648438 seconds
+@time_fn: main took 0.8113763332366943 seconds
+@time_fn: main took 0.25717639923095703 seconds
+[ multiple lines per file ]
+@time_fn: main took 74.57232856750488 seconds
+@time_fn: main took 246.9482078552246 seconds
+@time_fn: main took 46.175292015075684 seconds
+@time_fn: main took 80.90121984481812 seconds
+
+
+-----------------
+  Run number: 2
+-----------------
+[ One line per file ]
+@time_fn: main took 0.9246714115142822 seconds
+@time_fn: main took 1.0345277786254883 seconds
+@time_fn: main took 0.8104972839355469 seconds
+@time_fn: main took 0.33063817024230957 seconds
+[ multiple lines per file ]
+@time_fn: main took 81.75022602081299 seconds
+@time_fn: main took 191.0908215045929 seconds
+@time_fn: main took 63.34872484207153 seconds
+@time_fn: main took 64.15182971954346 seconds
+
+
+-----------------
+  Run number: 3
+-----------------
+[ One line per file ]
+@time_fn: main took 0.706995964050293 seconds
+@time_fn: main took 1.3831889629364014 seconds
+@time_fn: main took 1.4038939476013184 seconds
+@time_fn: main took 0.5130767822265625 seconds
+[ multiple lines per file ]
+@time_fn: main took 74.22204375267029 seconds
+@time_fn: main took 253.80148720741272 seconds
+@time_fn: main took 41.6736421585083 seconds
+@time_fn: main took 50.3913779258728 seconds
+
+
+-----------------
+  Run number: 4
+-----------------
+[ One line per file ]
+@time_fn: main took 0.911841869354248 seconds
+@time_fn: main took 2.0188190937042236 seconds
+@time_fn: main took 1.4077444076538086 seconds
+@time_fn: main took 1.0652244091033936 seconds
+[ multiple lines per file ]
+@time_fn: main took 79.0005362033844 seconds
+@time_fn: main took 152.38736605644226 seconds
+@time_fn: main took 59.626840353012085 seconds
+@time_fn: main took 74.79546236991882 seconds
+
+
+-----------------
+  Run number: 5
+-----------------
+[ One line per file ]
+@time_fn: main took 0.4673495292663574 seconds
+@time_fn: main took 0.9377841949462891 seconds
+@time_fn: main took 0.7858431339263916 seconds
+@time_fn: main took 0.294888973236084 seconds
+[ multiple lines per file ]
+@time_fn: main took 80.9088294506073 seconds
+@time_fn: main took 195.60561966896057 seconds
+@time_fn: main took 44.12165331840515 seconds
+@time_fn: main took 41.887165784835815 seconds
